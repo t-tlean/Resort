@@ -1,0 +1,8 @@
+body, html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+.App {
+  text-align: center;
+}
