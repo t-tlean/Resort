@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Azure Bay Resort. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Resort. All rights reserved.</p>
     </footer>
   );
 }

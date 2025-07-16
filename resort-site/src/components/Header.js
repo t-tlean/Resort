@@ -3,12 +3,9 @@ import './Header.css';
 function Header() {
   return (
     <header className="header">
-      <div className="logo">Resort</div>
+      <div className="logo">Тихий Ліс</div>
       <nav className="nav">
-        <a href="#about">About</a>
-        <a href="#amenities">Amenities</a>
-        <a href="#map">Map</a>
-        <a href="#contact">Contact</a>
+        <a href="#map">Мапа</a>
       </nav>
     </header>
   );

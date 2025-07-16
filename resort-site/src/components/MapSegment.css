@@ -27,7 +27,7 @@
   width: 40px;
   height: 40px;
   background-color: #2eac00;
-  opacity: 75%;
+  opacity: 35%;
   border: 2px solid #41cc00;
   border-radius: 6px;
   cursor: pointer;
@@ -94,13 +94,4 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
-}
-
-.gif-popup {
-  position: absolute;
-  z-index: 10;
-  animation: fadeIn 0.3s ease;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
 }
