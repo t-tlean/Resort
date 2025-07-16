@@ -3,8 +3,8 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Resort. All rights reserved.</p>
+    <footer className="site-footer">
+      <p>&copy; {new Date().getFullYear()} Тихий Ліс. Усі права захищені.</p>
     </footer>
   );
 }

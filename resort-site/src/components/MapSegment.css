@@ -1,86 +1,89 @@
-.map-segment {
+.map-section {
   padding: 60px 40px;
-  background-color: #f9f9f9;
+  background-color: #eef3e5; /* soft forest background */
   text-align: center;
 }
 
-.map-segment h2 {
+.map-title {
   font-size: 2rem;
-  color: #2c3e50;
+  color: #2f4f4f;
   margin-bottom: 30px;
 }
 
-.map-image {
+.map-container {
   position: relative;
   display: inline-block;
   width: 100%;
   max-width: 1000px;
 }
 
-.map-image img {
+.map-base {
   width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
-.house {
+.map-house {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-color: #2eac00;
-  opacity: 35%;
-  border: 2px solid #41cc00;
-  border-radius: 6px;
+  opacity: 0.35;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.house:hover {
-  background-color: #217c00;
+.map-house:hover,
+.map-house.active {
+  opacity: 0.8;
+  box-shadow: 0 0 10px 3px #4caf50;
 }
 
-.popup {
+.map-popup {
   position: absolute;
-  background-color: white;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 16px;
   border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  z-index: 9;
-  animation: fadeIn 0.3s ease;
+  width: 260px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  animation: fadeIn 0.2s ease-out;
+  text-align: left;
 }
 
-.popup h3 {
-  margin-top: 0;
-  color: #2c3e50;
+.map-popup h3 {
+  margin: 0 0 10px;
+  color: #2f4f4f;
+  font-size: 1.1rem;
 }
 
-.popup p {
-  color: #555;
-  margin: 10px 0;
+.popup-content {
+  font-size: 0.95rem;
+  color: #333;
 }
 
 .popup-controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .popup-controls button {
-  padding: 5px 12px;
-  font-size: 1rem;
-  border: none;
-  background-color: #2eac00;
+  background-color: #3c5e36;
   color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .popup-controls button:hover {
-  background-color: #2eac00;
+  background-color: #4caf50;
 }
 
-.close-btn {
+.popup-close {
   position: absolute;
   top: 6px;
   right: 10px;

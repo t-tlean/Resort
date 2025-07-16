@@ -72,28 +72,28 @@ function MapSegment() {
     setPageIndex(0);
   };
 
-  const handleClose = () => {
-    setSelectedHouse(null);
-  };
+  const handleClose = () => setSelectedHouse(null);
 
   const handleNext = () => {
     setPageIndex((prev) => (prev + 1) % houseData[selectedHouse].length);
   };
 
   const handlePrev = () => {
-    setPageIndex((prev) => (prev - 1 + houseData[selectedHouse].length) % houseData[selectedHouse].length);
+    setPageIndex((prev) =>
+      (prev - 1 + houseData[selectedHouse].length) % houseData[selectedHouse].length
+    );
   };
 
   return (
-    <section className="map-segment" id="map">
-      <h2>Мапа Тихого Лісу</h2>
-      <div className="map-image">
-        <img src={mapImage} alt="Resort Map" />
+    <section className="map-section" id="map">
+      <h2 className="map-title">Мапа Тихого Лісу</h2>
+      <div className="map-container">
+        <img src={mapImage} alt="Resort Map" className="map-base" />
 
         {Object.entries(positions).map(([id, pos]) => (
           <div
             key={id}
-            className="house"
+            className={`map-house${selectedHouse === parseInt(id) ? ' active' : ''}`}
             style={{ top: pos.top, left: pos.left }}
             onClick={() => handleHouseClick(parseInt(id))}
           />
@@ -101,17 +101,17 @@ function MapSegment() {
 
         {selectedHouse && (
           <div
-            className="popup"
+            className="map-popup"
             style={{
               top: `calc(${positions[selectedHouse].top} - 5%)`,
               left: `calc(${positions[selectedHouse].left} + 5%)`,
             }}
           >
-            <button className="close-btn" onClick={handleClose}>×</button>
+            <button className="popup-close" onClick={handleClose}>×</button>
             <h3>Будинок #{selectedHouse}</h3>
             <div className="popup-content">
-              {houseData[selectedHouse][pageIndex].split('\n').map((line, idx) => (
-                <div key={idx}>{line}</div>
+              {houseData[selectedHouse][pageIndex].split('\n').map((line, i) => (
+                <div key={i}>{line}</div>
               ))}
             </div>
             <div className="popup-controls">
